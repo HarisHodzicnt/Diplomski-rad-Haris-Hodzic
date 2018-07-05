@@ -1,0 +1,267 @@
+
+/*MY INTERFACE*/
+body{
+  margin: 0;
+  padding: 0;
+  background-image: url('../../images/pexels-photo-14676.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+}
+.ul{
+  margin-left:6%;
+}
+.list-group{
+  padding: 2px;
+text-align: center;
+margin-top: 45%;
+
+}
+.list-group li{
+  padding: 3rem;
+  font-size: 2rem;
+  background-color:rgba(0,4,20,0.7);
+}
+.list-group a{
+  text-decoration: none;
+  color:white;
+}
+.list-group li:hover{
+background-color:rgba(0,0,0,0.4);
+margin-right: -4%;
+margin-left: -4%;
+color:rgba(10,205,45,1);
+}
+
+
+#game{
+  color:white;
+  font-weight: bold;
+  font-size: 6.5rem;
+  text-shadow:1px -2px 3px white;
+}
+
+.gameHighScore{
+  margin-top: 10%;
+  position: fixed;
+  top:66%;
+  left:3%;
+}
+
+footer{
+  color:white;
+  border-top: 1px solid white;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color:rgba(0, 0,0,0.2);;
+  color: white;
+  text-align: center;
+
+}
+footer *{
+  padding: 3px;
+}
+.footertekst{
+  font-size: 1.8rem;
+  font-weight: bold;
+}
+@media(max-width:900px)
+{
+  #game{
+    display: none;
+  }
+  .gameHighScore{
+    margin-top: 10%;
+    position: static;
+  }
+  h1{
+    font-size: 5.5rem;
+  }
+  img{
+    margin-top: 8%;
+  }
+  .mainChanger p:hover{
+    transform: scale(1);
+  }
+  .mainChanger img:hover{
+    transform: scale(1) translateX(0px);
+  }
+  .col-sm-7 h2{
+    margin-top:4%;
+  }
+  .opis{
+    margin-left:18%;
+  }
+  footer{
+    display: block;
+    margin-top: 16%;
+  }
+  #mail{
+    display: none;
+    margin-right: 1%;
+  }
+  .ul{
+    margin-left:0%;
+  }
+  .list-group{
+    padding: 2px;
+  text-align: center;
+  margin-top: 5%;
+
+  }
+}
+
+
+/*HANGMAN*/
+
+/* Variabes */
+/* Mixin's */
+body {
+  text-align: center;
+  color:white;
+}
+
+.wrappper {
+  width: 100%;
+  margin: 0 auto;
+}
+.wrappper:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+canvas {
+  color: #fff;
+  border: #fff dashed 2px;
+  padding: 15px;
+  width:450px;
+}
+p {
+  font-size: 1.6em;
+}
+
+#alphabet {
+  margin: 15px auto;
+  padding: 0;
+  max-width: 900px;
+}
+#alphabet:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+#alphabet li {
+  float: left;
+  margin: 0 10px 10px 0;
+  list-style: none;
+  width: 35px;
+  height: 30px;
+  padding-top: 10px;
+  background: #fff;
+  color: #c1d72e;
+  cursor: pointer;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+  -khtml-border-radius: 5px;
+  border: solid 1px #fff;
+}
+#alphabet li:hover {
+  background: #c1d72e;
+  border: solid 1px #fff;
+  color: #fff;
+}
+
+#my-word {
+  margin: 0;
+  display: block;
+  padding: 0;
+  display: block;
+}
+
+#my-word li {
+  position: relative;
+  list-style: none;
+  margin: 0;
+  display: inline-block;
+  padding: 0 10px;
+  font-size: 1.6em;
+}
+
+.active {
+  opacity: 0.4;
+  filter: alpha(opacity=40);
+  -moz-transition: all 1s ease-in;
+  -moz-transition: all 0.3s ease-in-out;
+  -webkit-transition: all 0.3s ease-in-out;
+  cursor: default;
+}
+.active:hover {
+  -moz-transition: all 1s ease-in;
+  -moz-transition: all 0.3s ease-in-out;
+  -webkit-transition: all 0.3s ease-in-out;
+  opacity: 0.4;
+  filter: alpha(opacity=40);
+  -moz-transition: all 1s ease-in;
+  -moz-transition: all 0.3s ease-in-out;
+  -webkit-transition: all 0.3s ease-in-out;
+}
+
+#mylives {
+  font-size: 1.6em;
+  text-align: center;
+  display: block;
+}
+
+button {
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+  -khtml-border-radius: 5px;
+  color: #fff;
+  border: solid 1px #fff;
+  text-decoration: none;
+  cursor: pointer;
+  font-size: 1.2em;
+  padding: 18px 10px;
+  width: 180px;
+  outline: none;
+  background-color:rgba(0,4,20,0.3);
+  font-weight: 400;
+  text-transform: uppercase;
+
+}
+#buttons {
+  width:90%;
+}
+#buttons li{
+  width:50px;
+  height:50px;
+  background-color: rgba(0,4,20,0.7);
+}
+button:hover {
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  background: #fff;
+  border: solid 1px #fff;
+  color: black;
+  font-weight: bold;
+  transition:2s;
+}
+
+@media (max-width: 767px) {
+  #alphabet {
+    padding: 0 0 0 15px;
+  }
+}
+@media (max-width: 480px) {
+  #alphabet {
+    padding: 0 0 0 25px;
+  }
+}

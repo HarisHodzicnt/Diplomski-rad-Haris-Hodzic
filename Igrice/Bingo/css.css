@@ -1,0 +1,344 @@
+
+/*MY INTERFACE*/
+body{
+  margin: 0;
+  padding: 0;
+  background-image: url('../../images/pexels-photo-14676.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+}
+.ul{
+  margin-left:6%;
+}
+.list-group{
+  padding: 2px;
+text-align: center;
+margin-top: 35%;
+
+}
+.list-group li{
+  padding: 3rem;
+  font-size: 2rem;
+  background-color:rgba(0,4,20,0.7);
+}
+.list-group a{
+  text-decoration: none;
+  color:white;
+}
+.list-group li:hover{
+background-color:rgba(0,0,0,0.4);
+margin-right: -4%;
+margin-left: -4%;
+color:rgba(10,205,45,1);
+}
+
+
+#game{
+  color:white;
+  font-weight: bold;
+  font-size: 5.5rem;
+}
+
+.gameHighScore{
+  margin-top: 10%;
+  position: fixed;
+  top:66%;
+  left:3%;
+}
+
+footer{
+  color:white;
+  border-top: 1px solid white;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color:rgba(0, 0,0,0.2);;
+  color: white;
+  text-align: center;
+
+}
+footer *{
+  padding: 3px;
+}
+.footertekst{
+  font-size: 1.8rem;
+  font-weight: bold;
+}
+
+
+
+
+
+
+.wrapper {
+  display: table-cell;
+  vertical-align: middle;
+  text-align: center;
+}
+
+.content {
+  display: inline-block;
+  margin: 0 auto;
+  padding: 10px 20px;
+
+}
+
+.sidebar {
+  text-align: left;
+  font-family: 'Doppio One', sans-serif;
+  position: absolute;
+  color:white;
+  margin-top: 10%;
+
+}
+
+.panel {
+  padding: 12px;
+  margin-bottom: 20px;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+}
+
+.dif-options {
+  clear: both;
+  overflow: hidden;
+  margin: 20px -7px 0;
+}
+
+.dif-options div {
+  float: left;
+  width: 20%;
+}
+
+.dif-options input {
+  display: none;
+}
+
+.dif-options input:checked+label {
+  color: #fff;
+  background-color: #593f6b;
+  border-color: #fff;
+  cursor: default;
+}
+
+.dif-options label {
+  display: block;
+  margin: 0 auto;
+  width: 34px;
+  height: 34px;
+  background-color: #666;
+  border: solid 2px #ccc;
+  border-radius: 8px;
+  color: #999;
+  text-align: center;
+  line-height: 24px;
+  cursor: pointer;
+}
+
+.freeze .dif-options input:not(:checked)+label {
+  font-size: 0;
+  margin: 7px auto;
+  width: 10px;
+  height: 10px;
+  border-radius: 4px;
+  color: transparent;
+  line-height: 10px;
+  cursor: default;
+  transition: .2s;
+}
+
+.start {
+  margin-top: 20px;
+}
+
+.start button {
+  display: block;
+  width: 100%;
+  padding: 2px 12px 4px;
+  font-family: inherit;
+  font-size: 24px;
+  border: solid 2px #ccc;
+  border-radius: 8px;
+  background-color: #593f6b;
+  color: #fff;
+  cursor: pointer;
+}
+
+.start button:focus {
+  outline: none;
+}
+
+.freeze .start {
+  display: none;
+}
+
+.info div {
+  margin-top: 10px;
+}
+
+.board {
+  width: 428px;
+  height: 428px;
+  position: absolute;
+  left:52%;
+  margin-top: 68px;
+  background-image: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/77020/board.png");
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.4);
+}
+
+.lit-columns,
+.lit-cells,
+.chips,
+.click-columns {
+  position: absolute;
+  width: 428px;
+  height: 428px;
+  margin-left:-4.1%;
+  display:block;
+}
+
+.lit-columns div {
+  float: left;
+  width: 60px;
+  height: 426px;
+  margin: 1px 0 1px 1px;
+  transition: background-color 0.1s;
+}
+
+.lit-columns .lit {
+  background-color: rgba(255, 255, 255, 0.1);
+  transition: background-color 0.1s;
+}
+
+.lit-cells div {
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+.chips div {
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.chips .p1 {
+  background-image: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/77020/p1-chip.png");
+}
+
+.chips .p2 {
+  background-image: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/77020/p2-chip.png");
+}
+
+.chips .cursor {
+  bottom: 428px;
+  transition: left 0.1s ease-out;
+}
+
+.chips .dropped {
+  transition: bottom ease-in;
+  animation: bounce 0.3s;
+}
+
+.click-columns div {
+  float: left;
+  width: 61px;
+  height: 428px;
+}
+
+.click-columns div:first-child {
+  padding-left: 1px;
+}
+
+.click-columns .hover {
+  cursor: pointer;
+}
+
+@keyframes bounce {
+  0% {
+    animation-timing-function: ease-out;
+    transform: translateY(0);
+  }
+  30% {
+    animation-timing-function: ease-in;
+    transform: translateY(-40px);
+  }
+  60% {
+    animation-timing-function: ease-out;
+    transform: translateY(0);
+  }
+  80% {
+    animation-timing-function: ease-in;
+    transform: translateY(-10px);
+  }
+  100% {
+    animation-timing-function: ease-out;
+    transform: translateY(0);
+  }
+}
+
+@media(max-width:900px)
+{
+  .gameHighScore{
+    margin-top: 10%;
+    position: static;
+  }
+  h1{
+    font-size: 5.5rem;
+  }
+  img{
+    margin-top: 8%;
+  }
+  .mainChanger p:hover{
+    transform: scale(1);
+  }
+  .mainChanger img:hover{
+    transform: scale(1) translateX(0px);
+  }
+  .col-sm-7 h2{
+    margin-top:4%;
+  }
+  .opis{
+    margin-left:18%;
+  }
+  footer{
+    display: block;
+    margin-top: 16%;
+  }
+  #mail{
+    display: none;
+    margin-right: 1%;
+  }
+  .ul{
+    margin-left:0%;
+  }
+  .list-group{
+    padding: 2px;
+  text-align: center;
+  margin-top: 5%;
+
+  }
+
+.sidebar {
+	position:static;
+	width:100%;
+}
+.board {
+	position:static;
+	left:0%;
+}
+.lit-columns,
+.lit-cells,
+.chips,
+.click-columns,.lit-cells div,.chips div,{
+  position: static;
+
+}
+
+}

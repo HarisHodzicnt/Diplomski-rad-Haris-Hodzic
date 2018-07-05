@@ -1,0 +1,144 @@
+body{
+  margin: 0;
+  padding: 0;
+  background-image: url('images/pexels-photo-14676.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+}
+h1{
+  font-size: 5.5vw;
+  color: white;
+  font-weight: bold;
+  margin-left:2%;
+  margin-top: 3%;
+  text-shadow:4px -2px 4px white;
+}
+.opis{
+  margin-top: 8%;
+  margin-left: 8%;
+  max-width:100%;
+  text-align: center;
+}
+.opis p{
+    padding-left: 20px;
+    padding-right: 20px;
+    height: 350px;
+    width: 350px;
+    color:white;
+    display: table-cell;
+    text-align: center;
+    vertical-align: middle;
+    border-radius: 20%; /* may require vendor prefixes */
+    background:rgba(0, 0,0,0.2);
+    font-size: 2rem;
+}
+.ul{
+  margin-left:6%;
+}
+.list-group{
+  padding: 2px;
+text-align: center;
+margin-top: 6%;
+
+}
+.list-group li{
+  padding: 3rem;
+  font-size: 2rem;
+  background-color:rgba(0,4,20,0.7);
+}
+.list-group a{
+  text-decoration: none;
+  color:white;
+}
+.list-group li:hover{
+background-color:rgba(0,0,0,0.4);
+margin-right: -4%;
+margin-left: -4%;
+color:rgba(10,205,45,1);
+}
+
+.mainChanger p, .mainChanger img{
+  border-bottom:2px dashed white;
+  border-top:2px dashed white;
+  box-shadow:10px -4px 20px rgba(255,255,255,0.2);
+
+}
+.img{
+  margin-top:1rem;
+  max-width: 100%;
+}
+#game{
+  color:white;
+  font-weight: bold;
+  font-size: 5.5rem;
+}
+.mainChanger p:hover{
+  transform: scale(1.2);
+}
+.mainChanger img:hover{
+  transform: scale(1.1) translateX(30px);
+}
+.gameHighScore{
+  margin-top: 10%;
+  position: fixed;
+  top:66%;
+  left:3%;
+}
+
+footer{
+  color:white;
+  border-top: 1px solid white;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color:rgba(0, 0,0,0.2);;
+  color: white;
+  text-align: center;
+
+}
+footer *{
+  padding: 3px;
+}
+.footertekst{
+  font-size: 1.8rem;
+  font-weight: bold;
+}
+@media(max-width:900px)
+{
+  .gameHighScore{
+    margin-top: 10%;
+    position: static;
+  }
+  h1{
+    font-size: 5.5rem;
+  }
+  img{
+    margin-top: 8%;
+  }
+  .mainChanger p:hover{
+    transform: scale(1);
+  }
+  .mainChanger img:hover{
+    transform: scale(1) translateX(0px);
+  }
+  .col-sm-7 h2{
+    margin-top:4%;
+  }
+  .opis{
+    margin-left:18%;
+  }
+  footer{
+    display: block;
+    margin-top: 16%;
+  }
+  #mail{
+    display: none;
+    margin-right: 1%;
+  }
+  .ul{
+    margin-left:0%;
+  }
+}
